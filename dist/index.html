@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="XINGJI工作室旗下组织福瑞同萌官方网站"
+    />
+    <title>FURRIES - 福瑞同萌</title>
+    <link rel="icon" type="image/x-icon" href="rect_logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div id="app" class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#home" aria-label="首页">
+          <img src="./logo_black.png" alt="Organization logo" />
+        </a>
+
+        <nav class="site-nav">
+          <a v-for="item in navItems" :key="item.href" :href="item.href">
+            {{ item.label }}
+          </a>
+        </nav>
+      </header>
+
+      <main>
+        <section id="home" class="hero section">
+          <div class="hero-copy">
+            <p class="eyebrow">ORGANIZATION OFFICIAL WEBSITE</p>
+            <h1>和平 公正 创新</h1>
+            <p class="hero-text">
+              福瑞同萌依靠 XINGJI 工作室优质资源茁壮发展，致力于构建和平、公正、安全的福瑞控乌托邦，为福瑞正名，为福瑞发声。
+            </p>
+
+            <div class="hero-actions">
+              <a class="button primary" href="www.xingjisoft.com">主工作室</a>
+              <a class="button secondary" href="#about">了解组织</a>
+            </div>
+
+            <ul class="hero-highlights">
+              <li v-for="item in highlights" :key="item">{{ item }}</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-card hero-card-main">
+              <span>Primary Identity</span>
+              <img src="./logo.png" alt="Primary logo" />
+            </div>
+            <div class="hero-card hero-card-dark">
+              <span>Dark Mark</span>
+              <img src="./logo_white.png" alt="White logo" />
+            </div>
+            <div class="hero-card hero-card-light">
+              <span>Light Mark</span>
+              <img src="./logo_black.png" alt="Black logo" />
+            </div>
+          </div>
+        </section>
+
+        <!-- <section id="about" class="section">
+          <div class="section-heading">
+            <p class="eyebrow">ABOUT</p>
+            <h2>让组织形象先被看见，再被记住</h2>
+          </div>
+
+          <div class="about-grid">
+            <article class="panel intro-panel">
+              <p>
+                官网不只是放一个 Logo 和几个链接，而是把组织的气质、目标与可信度组织成一套清晰的对外叙事。
+              </p>
+              <p>
+                当前版本以“简洁上线、后续易扩展”为原则，先完成一个完整可发布的品牌门面页，后续可以继续加入成员介绍、作品归档、活动时间线、招募页或合作案例页。
+              </p>
+            </article>
+
+            <article class="panel stat-panel">
+              <div class="stat-item">
+                <strong>3</strong>
+                <span>套 Logo 视觉状态已纳入设计</span>
+              </div>
+              <div class="stat-item">
+                <strong>Vue</strong>
+                <span>单页静态实现，开发与构建流程完整</span>
+              </div>
+              <div class="stat-item">
+                <strong>0 Backend</strong>
+                <span>纯静态部署，成本低，适合快速发布</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="capabilities" class="section">
+          <div class="section-heading">
+            <p class="eyebrow">CAPABILITIES</p>
+            <h2>组织官网可以承载的核心内容</h2>
+          </div>
+
+          <div class="capability-grid">
+            <article v-for="item in capabilities" :key="item.title" class="panel capability-card">
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.text }}</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="workflow" class="section">
+          <div class="section-heading">
+            <p class="eyebrow">WORKFLOW</p>
+            <h2>从视觉资产到正式上线的路径</h2>
+          </div>
+
+          <div class="workflow-list">
+            <article v-for="item in workflow" :key="item.step" class="panel workflow-card">
+              <span class="workflow-step">{{ item.step }}</span>
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.text }}</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+          <div class="contact-card">
+            <div>
+              <p class="eyebrow">CONTACT</p>
+              <h2>如果你们准备正式对外展示，这个站已经可以作为起点</h2>
+              <p>
+                目前文案使用的是通用占位内容。你只要补充组织简介、联络方式、社交媒体链接和项目案例，就可以直接替换为正式版本。
+              </p>
+            </div>
+
+            <div class="contact-actions">
+              <a class="button primary" href="mailto:hello@example.com">hello@example.com</a>
+              <a class="button secondary" href="https://github.com/" target="_blank" rel="noreferrer">
+                GitHub / 社交链接
+              </a>
+            </div>
+          </div>
+        </section> -->
+      </main>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+  </html>

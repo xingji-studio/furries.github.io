@@ -1,0 +1,10 @@
+{
+  "name": "furries-official-website",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "build": "node scripts/build.js"
+  }
+}
